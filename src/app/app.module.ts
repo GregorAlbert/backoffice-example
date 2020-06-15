@@ -5,6 +5,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
     ReactiveFormsModule,
     CoreModule,
     SharedModule,
-    DashboardModule
+    DashboardModule,
+    RouterModule.forRoot(appRoutes, {useHash: true})
   ],
   providers: [],
   bootstrap: [AppComponent]
